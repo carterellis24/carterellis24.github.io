@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Michigan Football Fun Facts</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #00274C;
+      color: white;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 20px;
+      background-color: #FFCB05;
+      color: #00274C;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    p#fact {
+      margin-top: 30px;
+      font-size: 18px;
+    }
+    a {
+      display: block;
+      margin-top: 40px;
+      color: #FFCB05;
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <h1>Michigan Football Fun Facts</h1>
+  <p>Click below to discover amazing facts about the Wolverines!</p>
+  <button onclick="showFact()">Give me a fact</button>
+  <p id="fact"></p>
+
+  <a href="index.html">← Back to Home</a>
+
+  <script>
+    const facts = [
+      "Michigan has more wins than any other program in college football history.",
+      "The Big House seats over 107,000 fans and is the largest stadium in the U.S.",
+      "Desmond Howard struck the Heisman pose after a punt return vs. Ohio State in 1991.",
+      "Michigan has produced multiple Super Bowl-winning QBs, including Tom Brady and Jim Harbaugh.",
+      "Charles Woodson is the only primarily defensive player to win the Heisman Trophy.",
+      "The Wolverines lead the all-time series against more than half of the current Big Ten.",
+      "Their fight song, 'The Victors,' is widely considered the best in college football.",
+      "Michigan was the first team to wear winged helmets in 1938 under Coach Fritz Crisler.",
+      "The program has claimed 11 national championships.",
+      "Michigan holds the record for the most all-time winning seasons (120+)."
+    ];
+    function showFact() {
+      const randomIndex = Math.floor(Math.random() * facts.length);
+      document.getElementById("fact").textContent = facts[randomIndex];
+    }
+  </script>
+</body>
+</html>
